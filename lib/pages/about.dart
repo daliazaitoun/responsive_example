@@ -25,7 +25,8 @@ class AboutPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   "I am a Flutter Developer. Welcome to my portfolio!",
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp),
+                  style:
+                      TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp),
                 ),
               ),
             ),

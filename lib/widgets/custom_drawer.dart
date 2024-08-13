@@ -29,7 +29,9 @@ class CustomDrawer extends StatelessWidget {
                       fontSize: 24,
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   CircleAvatar(
                     backgroundImage: AssetImage('assets/user.jpg'),
                     radius: 30.0,
@@ -38,13 +40,12 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          
           ListTile(
             leading: const Icon(Icons.person),
             title: const Text('About'),
             onTap: () {
-              
-              Navigator.push(context, MaterialPageRoute(builder:(ctx)=> AboutPage() ));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (ctx) => AboutPage()));
             },
           ),
           ListTile(
@@ -63,7 +64,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/contact');
             },
           ),
-            SizedBox(
+          SizedBox(
             height: 300.sp,
             child: Center(
                 child: Column(

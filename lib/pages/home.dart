@@ -44,30 +44,26 @@ class _HomePageState extends State<HomePage> {
           //             builder: (context) => WebViewPage(url: Linkedurl)));
           //   },
           //   child: Text('Linkedin Profile'),
-       //   ),
+          //   ),
           TextButton(
             onPressed: () {
               openLink(GitHuburl);
             },
-            child: Text('GitHub Profile',selectionColor: Colors.black,),
+            child: Text(
+              'GitHub Profile',
+              selectionColor: Colors.black,
+            ),
           )
         ],
       ),
-      drawer: 
-      MediaQuery.sizeOf(context).width > 600 ?
-      const CustomDrawer()
+      drawer: const CustomDrawer(),
+      body: _pages.elementAt(_selectedIndex),
+      bottomNavigationBar: MediaQuery.sizeOf(context).width < 600
+          ? CustomTabBar(
+              currentIndex: _selectedIndex,
+              onTap: _onItemTapped,
+            )
           : SizedBox(),
-      body: 
-      _pages.elementAt(_selectedIndex),
-      bottomNavigationBar: 
-       MediaQuery.sizeOf(context).width < 600 ?
-       
-      CustomTabBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ):
-      SizedBox(),
-      
     );
   }
 
