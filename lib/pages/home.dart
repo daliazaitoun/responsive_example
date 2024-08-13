@@ -53,12 +53,21 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-     // drawer: const CustomDrawer(),
-      body: _pages.elementAt(_selectedIndex),
-      bottomNavigationBar: CustomTabBar(
+      drawer: 
+      MediaQuery.sizeOf(context).width > 600 ?
+      const CustomDrawer()
+          : SizedBox(),
+      body: 
+      _pages.elementAt(_selectedIndex),
+      bottomNavigationBar: 
+       MediaQuery.sizeOf(context).width < 600 ?
+       
+      CustomTabBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-      ),
+      ):
+      SizedBox(),
+      
     );
   }
 
