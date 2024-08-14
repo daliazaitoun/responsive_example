@@ -4,7 +4,7 @@ import 'package:responsive1/pages/about.dart';
 import 'package:responsive1/pages/contact.dart';
 import 'package:responsive1/pages/projects.dart';
 import 'package:responsive1/widgets/custom_drawer.dart';
-import 'package:responsive1/widgets/custom_tabbar.dart';
+import 'package:responsive1/widgets/custom_navbar.dart';
 import 'package:responsive1/widgets/webview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
       drawer: const CustomDrawer(),
       body: _pages.elementAt(_selectedIndex),
       bottomNavigationBar: MediaQuery.sizeOf(context).width < 600
-          ? CustomTabBar(
+          ? CustomNavBar(
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
             )

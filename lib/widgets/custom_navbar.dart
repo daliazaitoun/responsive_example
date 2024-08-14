@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-class CustomTabBar extends StatelessWidget {
+class CustomNavBar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
 
-  const CustomTabBar({
+  const CustomNavBar({
     Key? key,
     required this.currentIndex,
     required this.onTap,
